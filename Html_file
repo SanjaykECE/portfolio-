@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/49bc86e4ff.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo_img.png" class="logo">
+                <ul>
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Computer Science Engineer</p>
+                <h1>Hello all, I'm <span>SANJAY</span><br>From India</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ---------- About section--------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="mypic_1.jpg" class="pic1">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am an Electronics and communication engineer student in sri eshwar college of engineering 
+                        which is located in kinathukadavu.  I consider myself a responsible and orderly person.
+                        I am looking for my working experience.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('certificate')">Certificate</p>
+                    </div>
+                    <div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Programming languages</span><br><br>JAVA,PHYTHON- Programming<br><br>C - Programming</li>
+                                <li><span>WEB development</span><br><br>Web app development</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Secondary schooling </li><br> PVM.Mat.Hr.Sec.School</br>
+
+
+
+                                <li><span>Higher Secondary schooling</span><br><br>PVM.MAT.HR.SEC.SCHOOL</li>
+                                <li><span>College</span><br><br>Sri Eshwar College of engineering</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="tab-contents" id="certificate">
+                            <ul>
+                                <li><span>Udemy</span><br><br>Data structure and algorithm</li>
+                                <li><span>SKILL RACK</span><br><br>SQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------- Services section --------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Service 1</h2>
+                    <p>To be added</p>
+                    <a href="#">LEARN MORE</a>
+                </div>
+                <div>
+                    <h2>Service 2</h2>
+                    <p>To be added</p>
+                    <a href="#">LEARN MORE</a>
+                </div>
+                <div>
+                    <h2>Service 3</h2>
+                    <p>To be added</p>
+                    <a href="#">LEARN MORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------- Portfolio --------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">MY Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    image 1  
+                    <!-- image of work -->
+                </div>
+                <div class="work">
+                    image 2
+                    <!-- image of work -->
+                </div>
+                <div class="work">
+                    image 3
+                    <!-- image of work -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------- contact ---------/ -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i>sanjay.k2021ecec@sece.ac.in.com</p>
+                    <p><i class="fa-solid fa-phone"></i>9791767447</p>
+                    <div class="social-icons">
+                        <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                        <a herf="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a herf="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                      <input type="text" name="Name" placeholder="Your Name" required>
+                      <input type="email" name="Email" placeholder="Your Email" required>
+                      <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                      <button type="submit" class="btn btn2">Sumit</button>
+                    </form>
+               </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
